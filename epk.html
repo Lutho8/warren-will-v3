@@ -46,11 +46,15 @@ h1{font-family:var(--bebas);font-weight:400;font-size:clamp(64px,12vw,168px);lin
 .hero-portrait{border-radius:22px;overflow:hidden;border:1px solid var(--line-soft);aspect-ratio:4/5;
   box-shadow:0 28px 70px -30px rgba(120,90,40,.42)}
 .hero-portrait img{width:100%;height:100%;object-fit:cover}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero-cta .btn svg{width:14px;height:14px}
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;gap:34px;padding:64px 20px 48px;text-align:center}
   .hero p.sub{margin:0 auto}
   .chips{justify-content:center}
   .hero-portrait{max-width:300px;margin:0 auto}
+  .hero-cta{justify-content:center}
+  .hero-cta .btn{flex:1 1 100%;justify-content:center;min-height:52px}
 }
 
 section{padding:64px 28px;max-width:1200px;margin:0 auto}
@@ -147,7 +151,7 @@ footer{padding:36px 28px;display:flex;align-items:center;justify-content:space-b
   .btn-ghost{margin-left:0}
 }
 @media print{
-  #nav,.vid-grid,.f-links{display:none}
+  #nav,.vid-grid,.f-links,.no-print{display:none}
   .hero{padding:24px 0;display:block}
   section{padding:28px 0}
   body{background:#fff}
@@ -172,6 +176,12 @@ footer{padding:36px 28px;display:flex;align-items:center;justify-content:space-b
       <span class="chip"><b>±50</b> gigs / year</span>
       <span class="chip">tech house · house · afro house</span>
       <span class="chip">DE / EN</span>
+    </div>
+    <div class="hero-cta no-print">
+      <a class="btn" href="epk-warren-will.pdf" download="Warren-Will-EPK-2026.pdf">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12 16l-6-6h4V3h4v7h4l-6 6zM4 19h16v2H4z"/></svg>
+        Download EPK — PDF</a>
+      <a class="btn btn-ghost" href="mailto:booking@warrenwilliam.de?subject=Booking%20Inquiry%20—%20Warren%20Will%20(via%20EPK)">Book Warren →</a>
     </div>
   </div>
   <div class="hero-portrait">
@@ -300,6 +310,9 @@ footer{padding:36px 28px;display:flex;align-items:center;justify-content:space-b
     <p>One email — date, city, venue type. You get a reply within 48 hours with availability, a tailored offer and the rider. Für Anfragen auf Deutsch — einfach schreiben.</p>
     <a class="btn" href="mailto:booking@warrenwilliam.de?subject=Booking%20Inquiry%20—%20Warren%20Will%20(via%20EPK)">booking@warrenwilliam.de</a>
     <a class="btn btn-ghost" href="index.html#booking">Booking form →</a>
+    <a class="btn btn-ghost no-print" href="epk-warren-will.pdf" download="Warren-Will-EPK-2026.pdf">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12 16l-6-6h4V3h4v7h4l-6 6zM4 19h16v2H4z"/></svg>
+      Download as PDF ↓</a>
   </div>
 </section>
 
