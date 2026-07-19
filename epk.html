@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#f7f4ee"/>
+<title>Warren Will — Electronic Press Kit · DJ & Producer Munich</title>
+<meta name="description" content="Warren Will EPK — Munich Tech House DJ & producer. Bio, press photos, live videos, rider, packages and booking contact. booking@warrenwilliam.de"/>
+<meta name="robots" content="index,follow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ivory:#f7f4ee; --paper:#fffdf8; --ink:#16130e; --ink2:#4a443a;
+  --gold:#a9853e; --gold-soft:#c8ab72;
+  --line:rgba(22,19,14,.14); --line-soft:rgba(22,19,14,.07);
+  --glass:rgba(255,253,248,.58);
+  --bebas:'Bebas Neue',sans-serif; --grot:'Space Grotesk',sans-serif; --mono:'Space Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ivory);color:var(--ink);font-family:var(--grot);font-weight:300;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,video{max-width:100%;display:block}
+::selection{background:var(--gold);color:#fff}
+
+#nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:14px 28px;background:var(--glass);backdrop-filter:blur(16px) saturate(1.3);border-bottom:1px solid var(--line-soft)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo .mark{width:34px;height:34px;border:1.5px solid var(--gold);display:grid;place-items:center;font-family:var(--bebas);font-size:16px;color:var(--gold)}
+.logo .name{font-family:var(--bebas);font-size:20px;letter-spacing:.18em}
+.nav-cta{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);padding:9px 15px;border-radius:100px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--gold);transition:.25s}
+.nav-cta:hover{background:var(--gold);color:#fff}
+@media(max-width:700px){.nav-cta .nb-text{display:none}}
+
+.hero{padding:96px 28px 64px;max-width:1200px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+h1{font-family:var(--bebas);font-weight:400;font-size:clamp(64px,12vw,168px);line-height:.88;margin:12px 0 14px}
+.hero p.sub{max-width:520px;color:var(--ink2);font-size:15px;line-height:1.65}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.chip{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);
+  border:1px solid var(--line);border-radius:100px;padding:8px 14px;background:var(--paper)}
+.chip b{color:var(--gold);font-weight:400}
+
+section{padding:64px 28px;max-width:1200px;margin:0 auto}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px;border-bottom:1px solid var(--line);padding-bottom:16px}
+.sec-tag{font-family:var(--mono);font-size:10px;color:var(--gold);letter-spacing:.2em}
+h2{font-family:var(--bebas);font-weight:400;font-size:clamp(38px,6vw,72px);line-height:.95}
+.sec-note{margin-left:auto;font-family:var(--mono);font-size:9px;color:var(--ink2);letter-spacing:.18em;text-transform:uppercase}
+@media(max-width:700px){.sec-note{display:none}}
+
+.bio p{color:var(--ink2);font-size:15px;line-height:1.85;margin-bottom:14px;max-width:680px}
+.bio p b{color:var(--ink);font-weight:500}
+.stats{display:flex;gap:36px;margin-top:22px;flex-wrap:wrap}
+.stat .n{font-family:var(--bebas);font-size:42px;color:var(--gold)}
+.stat .l{font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--ink2);text-transform:uppercase}
+
+.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:900px){.photo-grid{grid-template-columns:repeat(2,1fr)}}
+.photo{border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;aspect-ratio:4/5;background:var(--paper);position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.photo:hover img{transform:scale(1.04)}
+.photo span{position:absolute;left:10px;bottom:10px;font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;
+  color:#fff;background:rgba(22,19,14,.55);backdrop-filter:blur(8px);padding:5px 9px;border-radius:100px}
+.photo-note{font-family:var(--mono);font-size:9px;color:var(--ink2);letter-spacing:.14em;text-transform:uppercase;margin-top:12px}
+
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.vid-grid{grid-template-columns:1fr}}
+.vid-card{border:1px solid var(--line-soft);border-radius:16px;overflow:hidden;background:var(--paper)}
+.vid-card video{width:100%;aspect-ratio:16/10;object-fit:cover}
+.vid-card p{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink2);padding:12px 14px}
+.vid-card p b{color:var(--gold);font-weight:400}
+
+.sound-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+@media(max-width:900px){.sound-grid{grid-template-columns:1fr}}
+.sc-embed{border:1px solid var(--line-soft);border-radius:18px;overflow:hidden;background:var(--paper);
+  box-shadow:0 22px 60px -34px rgba(120,90,40,.25)}
+.sc-embed iframe{width:100%;height:380px;border:0;display:block}
+.plat-row{display:flex;gap:10px;flex-wrap:wrap}
+.plat{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:100px;padding:10px 16px;color:var(--ink2);transition:.25s;background:var(--paper)}
+.plat:hover{border-color:var(--gold);color:var(--gold)}
+.feat-label{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink2);margin-bottom:14px}
+.feat-label b{color:var(--gold);font-weight:400}
+
+.gig-row{display:flex;align-items:center;gap:16px;padding:14px 6px;border-bottom:1px solid var(--line-soft)}
+.g-date{text-align:center;min-width:44px}
+.g-d{display:block;font-family:var(--bebas);font-size:26px;line-height:1;color:var(--gold)}
+.g-m{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.24em;color:var(--ink2);margin-top:2px}
+.g-info h4{font-weight:500;font-size:15px}
+.g-info p{font-family:var(--mono);font-size:9px;color:var(--ink2);letter-spacing:.12em;margin-top:3px;text-transform:uppercase}
+.g-tag{margin-left:auto;font-family:var(--mono);font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+  border:1px solid var(--gold-soft);border-radius:100px;padding:4px 10px}
+
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.pkg-grid{grid-template-columns:1fr}}
+.pkg{border:1px solid var(--line-soft);border-radius:18px;padding:26px 22px;background:var(--paper)}
+.pkg .p-tag{font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase}
+.pkg h3{font-family:var(--bebas);font-size:32px;font-weight:400;margin:10px 0 4px}
+.pkg .p-price{font-family:var(--mono);font-size:12px;margin-bottom:14px}
+.pkg ul{list-style:none}
+.pkg li{font-size:13px;color:var(--ink2);padding:7px 0 7px 16px;position:relative;line-height:1.5}
+.pkg li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+
+.rider-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:800px){.rider-grid{grid-template-columns:1fr}}
+.rider{border:1px solid var(--line-soft);border-radius:18px;padding:26px 22px;background:var(--paper)}
+.rider h3{font-family:var(--bebas);font-size:26px;font-weight:400;margin-bottom:12px}
+.rider li{font-size:13px;color:var(--ink2);padding:7px 0 7px 16px;position:relative;line-height:1.6;list-style:none}
+.rider li::before{content:'—';position:absolute;left:0;color:var(--gold)}
+.rider-note{font-family:var(--mono);font-size:9px;color:var(--ink2);letter-spacing:.14em;text-transform:uppercase;margin-top:16px}
+
+#book{background:var(--paper);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);max-width:none;text-align:center}
+#book .inner{max-width:760px;margin:0 auto}
+#book h2{font-size:clamp(44px,8vw,96px)}
+#book p{color:var(--ink2);font-size:14px;line-height:1.7;margin:16px auto 26px;max-width:480px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;padding:16px 28px;border-radius:100px;border:1px solid var(--ink);transition:.3s;background:var(--ink);color:var(--ivory)}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.btn-ghost{background:transparent;color:var(--ink);margin-left:10px}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);background:transparent}
+footer{padding:36px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1200px;margin:0 auto}
+.f-copy{font-family:var(--mono);font-size:9px;color:var(--ink2);letter-spacing:.14em;text-transform:uppercase}
+.f-links{display:flex;gap:16px}
+.f-links a{font-family:var(--mono);font-size:9px;color:var(--ink2);letter-spacing:.16em;text-transform:uppercase}
+.f-links a:hover{color:var(--gold)}
+
+@media print{
+  #nav,.vid-grid,.f-links{display:none}
+  .hero{padding:24px 0}
+  section{padding:28px 0}
+  body{background:#fff}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav" aria-label="EPK navigation">
+  <a href="index.html" class="logo"><span class="mark">WW</span><span class="name">WARREN&nbsp;WILL</span></a>
+  <a class="nav-cta" href="mailto:booking@warrenwilliam.de"><span class="nb-text">booking@warrenwilliam.de</span><span aria-hidden="true">BOOK</span></a>
+</nav>
+
+<header class="hero">
+  <p class="eyebrow">// electronic press kit · 2026</p>
+  <h1>WARREN<br>WILL</h1>
+  <p class="sub">Munich DJ &amp; producer. Groovy, bass-driven Tech House — from basement clubs to open-air mountain floors across the DACH region.</p>
+  <div class="chips">
+    <span class="chip"><b>MUC</b> home base</span>
+    <span class="chip"><b>22</b> tracks released</span>
+    <span class="chip"><b>±50</b> gigs / year</span>
+    <span class="chip">tech house · house · afro house</span>
+    <span class="chip">DE / EN</span>
+  </div>
+</header>
+
+<section class="bio">
+  <div class="sec-head"><span class="sec-tag">// 01</span><h2>BIO</h2></div>
+  <p><b>Warren Will</b> is a Munich-based DJ and producer playing groovy, bass-driven Tech House — the kind that fills floors and keeps them full. From basement clubs to open-air mountain stages across Germany, Austria and Switzerland, his sets are built for one thing: the moment the whole room moves.</p>
+  <p>Dad of two, relentless digger, and the man behind the <b>Vol mix series</b> — including <b>Vol2 · Berlin Techno</b>. His remix of Ace of Base's "All That She Wants" and the free-download VIP "She Wants To Move" have become staples of his sets, alongside live recordings like the Graf Rumford Afro House mix and the Howler live series.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">22</div><div class="l">Tracks released</div></div>
+    <div class="stat"><div class="n">±50</div><div class="l">Gigs / year</div></div>
+    <div class="stat"><div class="n">MUC</div><div class="l">Home base</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-tag">// 02</span><h2>PRESS PHOTOS</h2><span class="sec-note">click to open full size</span></div>
+  <div class="photo-grid">
+    <a class="photo" href="assets/gig-starni.jpg" target="_blank" rel="noopener"><img src="assets/gig-starni.jpg" alt="Warren Will live — 5 Years Starni open air"/><span>5 Years Starni</span></a>
+    <a class="photo" href="assets/gig-mountain.jpg" target="_blank" rel="noopener"><img src="assets/gig-mountain.jpg" alt="Warren Will live — mountain open air, the Alps"/><span>Mountain Open Air</span></a>
+    <a class="photo" href="assets/gig-bestof.jpg" target="_blank" rel="noopener"><img src="assets/gig-bestof.jpg" alt="Warren Will live — on the road"/><span>On The Road</span></a>
+    <a class="photo" href="https://i1.sndcdn.com/avatars-GAq6zX4KdBa8xWD0-In9RrQ-t1080x1080.jpg" target="_blank" rel="noopener"><img src="https://i1.sndcdn.com/avatars-GAq6zX4KdBa8xWD0-In9RrQ-t1080x1080.jpg" alt="Warren Will — portrait"/><span>Portrait</span></a>
+  </div>
+  <p class="photo-note">Hi-res originals + approved usage: booking@warrenwilliam.de</p>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-tag">// 03</span><h2>LIVE VIDEOS</h2><span class="sec-note">recent dancefloors</span></div>
+  <div class="vid-grid">
+    <div class="vid-card"><video muted loop playsinline preload="metadata" poster="assets/gig-starni.jpg" src="assets/gig-starni.mp4"></video><p><b>01</b> 5 Years Starni — Open Air</p></div>
+    <div class="vid-card"><video muted loop playsinline preload="metadata" poster="assets/gig-mountain.jpg" src="assets/gig-mountain.mp4"></video><p><b>02</b> Mountain Open Air — The Alps</p></div>
+    <div class="vid-card"><video muted loop playsinline preload="metadata" poster="assets/gig-bestof.jpg" src="assets/gig-bestof.mp4"></video><p><b>03</b> Best Of — On The Road</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-tag">// 04</span><h2>THE SOUND</h2><span class="sec-note">live set — press play</span></div>
+  <div class="sound-grid">
+    <div>
+      <p class="feat-label">Featured live set — <b>Howler Recording 4</b></p>
+      <div class="sc-embed">
+        <iframe title="Warren Will — Howler Recording 4 on SoundCloud" scrolling="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/warrenwillmusic/howler-recording-4&color=%23a9853e&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true">
+        </iframe>
+      </div>
+    </div>
+    <div>
+      <p class="feat-label">Platforms</p>
+      <div class="plat-row">
+        <a class="plat" href="https://soundcloud.com/warrenwillmusic" target="_blank" rel="noopener">SoundCloud</a>
+        <a class="plat" href="https://open.spotify.com/artist/6wMr4zKPrrR0UVz08WtUWc" target="_blank" rel="noopener">Spotify</a>
+        <a class="plat" href="https://www.youtube.com/@warrenwillmusic" target="_blank" rel="noopener">YouTube</a>
+        <a class="plat" href="https://www.instagram.com/warrenwillmusic/" target="_blank" rel="noopener">Instagram</a>
+        <a class="plat" href="https://www.tiktok.com/@warrenwillmusic" target="_blank" rel="noopener">TikTok</a>
+      </div>
+      <p class="feat-label" style="margin-top:28px">Signature tracks</p>
+      <div class="plat-row">
+        <a class="plat" href="https://soundcloud.com/warrenwillmusic/vol2-berlin-techno" target="_blank" rel="noopener">Vol2 — Berlin Techno</a>
+        <a class="plat" href="https://soundcloud.com/warrenwillmusic/she-wants-to-move-warren-will-vip" target="_blank" rel="noopener">She Wants To Move [VIP]</a>
+        <a class="plat" href="https://soundcloud.com/warrenwillmusic/ace-of-base-all-that-she-1" target="_blank" rel="noopener">All That She Wants (Remix)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-tag">// 05</span><h2>UPCOMING</h2><span class="sec-note">august 2026</span></div>
+  <div class="gig-row"><div class="g-date"><span class="g-d">08</span><span class="g-m">AUG</span></div><div class="g-info"><h4>Pacha Munich</h4><p>Munich</p></div><span class="g-tag">Club</span></div>
+  <div class="gig-row"><div class="g-date"><span class="g-d">14</span><span class="g-m">AUG</span></div><div class="g-info"><h4>Gateway Gardens Club</h4><p>Frankfurt</p></div><span class="g-tag">Club</span></div>
+  <div class="gig-row"><div class="g-date"><span class="g-d">20</span><span class="g-m">AUG</span></div><div class="g-info"><h4>Pracht</h4><p>Frankfurt</p></div><span class="g-tag">Club</span></div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-tag">// 06</span><h2>PACKAGES</h2><span class="sec-note">50% deposit secures the date</span></div>
+  <div class="pkg-grid">
+    <div class="pkg">
+      <span class="p-tag">Club Set</span><h3>CLUB NIGHT</h3><p class="p-price">€250–400 / night</p>
+      <ul><li>2–3 h Tech House set, own USB / laptop setup</li><li>Community guestlist push to fill the floor</li><li>Social clip of the night for the venue</li></ul>
+    </div>
+    <div class="pkg">
+      <span class="p-tag">Private &amp; Wedding</span><h3>PRIVATE EVENT</h3><p class="p-price">€600–1,200 / event</p>
+      <ul><li>4–6 h coverage · pre-event music consultation</li><li>Tailored playlist arc + backup equipment</li><li>Optional custom edit of the couple's song</li></ul>
+    </div>
+    <div class="pkg">
+      <span class="p-tag">Festival / Open Air</span><h3>FESTIVAL</h3><p class="p-price">€500+ · plus travel</p>
+      <ul><li>60–90 min peak set · stage plot &amp; tech rider</li><li>Recorded set for YouTube · event cross-promo</li><li>Germany-wide &amp; DACH travel</li></ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><span class="sec-tag">// 07</span><h2>TECH &amp; HOSPITALITY</h2><span class="sec-note">summary — full rider on request</span></div>
+  <div class="rider-grid">
+    <div class="rider">
+      <h3>DJ SETUP</h3>
+      <ul>
+        <li>2+ CDJs (current-gen) or XDJ all-in-one — or Warren brings his own USB / laptop rig</li>
+        <li>1× 4-channel club mixer (DJM-900 class or equivalent)</li>
+        <li>2× booth monitors, level-controlled from booth</li>
+        <li>Soundcheck / line check: 60 min before doors</li>
+      </ul>
+    </div>
+    <div class="rider">
+      <h3>ON THE NIGHT</h3>
+      <ul>
+        <li>Set lengths: 60–90 min (festival) · 2–3 h (club) · up to 6 h (private)</li>
+        <li>Travel: Munich-based — Germany-wide &amp; DACH, travel + accommodation for 100 km+</li>
+        <li>Own content capture for socials (recap clip for the venue included)</li>
+        <li>50% deposit secures the date · erste Option holds 7 days</li>
+      </ul>
+    </div>
+  </div>
+  <p class="rider-note">Full technical rider PDF + stage plot: booking@warrenwilliam.de</p>
+</section>
+
+<section id="book">
+  <div class="inner">
+    <p class="eyebrow">// bookings</p>
+    <h2>BOOK WARREN WILL</h2>
+    <p>One email — date, city, venue type. You get a reply within 48 hours with availability, a tailored offer and the rider. Für Anfragen auf Deutsch — einfach schreiben.</p>
+    <a class="btn" href="mailto:booking@warrenwilliam.de?subject=Booking%20Inquiry%20—%20Warren%20Will%20(via%20EPK)">booking@warrenwilliam.de</a>
+    <a class="btn btn-ghost" href="index.html#booking">Booking form →</a>
+  </div>
+</section>
+
+<footer>
+  <p class="f-copy">© 2026 Warren Will · Munich · Electronic Press Kit</p>
+  <nav class="f-links" aria-label="Footer links">
+    <a href="index.html">Website</a>
+    <a href="https://soundcloud.com/warrenwillmusic" target="_blank" rel="noopener">SoundCloud</a>
+    <a href="https://www.instagram.com/warrenwillmusic/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.youtube.com/@warrenwillmusic" target="_blank" rel="noopener">YouTube</a>
+  </nav>
+</footer>
+
+<script>
+/* videos: play only while visible */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  const v = e.target;
+  if(e.isIntersecting){ v.play().catch(()=>{}); } else { v.pause(); }
+}), { threshold:.2 });
+document.querySelectorAll('.vid-card video').forEach(v => {
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  io.observe(v);
+});
+</script>
+</body>
+</html>
