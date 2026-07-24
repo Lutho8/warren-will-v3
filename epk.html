@@ -35,6 +35,16 @@ img,video{max-width:100%;display:block}
 .nav-cta:hover{background:var(--ink);border-color:var(--ink);color:#fff}
 @media(max-width:700px){.nav-cta .nb-text{display:none}}
 
+.lang-toggle{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:100px;
+  padding:7px 12px;background:var(--paper)}
+.lang-toggle button{font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--ink2);
+  background:none;border:0;cursor:pointer;padding:2px 3px;transition:.2s}
+.lang-toggle button:hover{color:var(--gold)}
+.lang-toggle button.active{color:var(--gold);font-weight:700}
+.lang-toggle .lt-sep{font-family:var(--mono);font-size:10px;color:var(--line)}
+@media(max-width:560px){#nav{padding:12px 14px}.logo .name{font-size:16px;letter-spacing:.14em}}
+@media(max-width:420px){.logo .name{display:none}}
+
 .hero{padding:96px 28px 64px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
 .eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
 h1{font-family:var(--bebas);font-weight:400;font-size:clamp(64px,12vw,168px);line-height:.88;margin:12px 0 14px}
@@ -160,79 +170,82 @@ footer{padding:36px 28px;display:flex;align-items:center;justify-content:space-b
 </head>
 <body>
 
-<nav id="nav" aria-label="EPK navigation">
+<nav id="nav" aria-label="EPK navigation" data-i18n-aria="nav.aria">
   <a href="index.html" class="logo"><span class="mark">WW</span><span class="name">WARREN&nbsp;WILL</span></a>
-  <a class="nav-cta" href="mailto:booking@warrenwilliam.de"><span class="nb-text">booking@warrenwilliam.de</span><span aria-hidden="true">BOOK</span></a>
+  <div class="lang-toggle no-print" role="group" aria-label="Language / Sprache">
+    <button type="button" data-lang="de">DE</button><span class="lt-sep" aria-hidden="true">|</span><button type="button" data-lang="en">EN</button>
+  </div>
+  <a class="nav-cta" href="mailto:booking@warrenwilliam.de"><span class="nb-text">booking@warrenwilliam.de</span><span aria-hidden="true" data-i18n="nav.book">BOOK</span></a>
 </nav>
 
 <header class="hero">
   <div class="hero-copy">
     <p class="eyebrow">// electronic press kit · 2026</p>
     <h1>WARREN<br>WILL</h1>
-    <p class="sub">Munich DJ &amp; producer. Groovy, bass-driven Tech House — from basement clubs to open-air mountain floors across the DACH region.</p>
+    <p class="sub" data-i18n="hero.sub">Munich DJ &amp; producer. Groovy, bass-driven Tech House — from basement clubs to open-air mountain floors across the DACH region.</p>
     <div class="chips">
-      <span class="chip"><b>MUC</b> home base</span>
-      <span class="chip"><b>22</b> tracks released</span>
-      <span class="chip"><b>±50</b> gigs / year</span>
+      <span class="chip"><b>MUC</b> <span data-i18n="chip.base">home base</span></span>
+      <span class="chip"><b>22</b> <span data-i18n="chip.tracks">tracks released</span></span>
+      <span class="chip"><b>±50</b> <span data-i18n="chip.gigs">gigs / year</span></span>
       <span class="chip">tech house · house · afro house</span>
       <span class="chip">DE / EN</span>
     </div>
     <div class="hero-cta no-print">
       <a class="btn" href="epk-warren-will.pdf" download="Warren-Will-EPK-2026.pdf">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12 16l-6-6h4V3h4v7h4l-6 6zM4 19h16v2H4z"/></svg>
-        Download EPK — PDF</a>
-      <a class="btn btn-ghost" href="mailto:booking@warrenwilliam.de?subject=Booking%20Inquiry%20—%20Warren%20Will%20(via%20EPK)">Book Warren →</a>
+        <span data-i18n="hero.pdf">Download EPK — PDF</span></a>
+      <a class="btn btn-ghost" href="mailto:booking@warrenwilliam.de?subject=Booking%20Inquiry%20—%20Warren%20Will%20(via%20EPK)" data-i18n-href="hero.mail"><span data-i18n="hero.book">Book Warren →</span></a>
     </div>
   </div>
   <div class="hero-portrait">
-    <img src="https://i1.sndcdn.com/avatars-GAq6zX4KdBa8xWD0-In9RrQ-t1080x1080.jpg" alt="Warren Will — portrait" fetchpriority="high"/>
+    <img src="https://i1.sndcdn.com/avatars-GAq6zX4KdBa8xWD0-In9RrQ-t1080x1080.jpg" alt="Warren Will — portrait" data-i18n-alt="hero.imgalt" fetchpriority="high"/>
   </div>
 </header>
 
 <section class="bio">
   <div class="sec-head"><span class="sec-tag">// 01</span><h2>BIO</h2></div>
-  <p><b>Warren Will</b> is a Munich-based DJ and producer playing groovy, bass-driven Tech House — the kind that fills floors and keeps them full. From basement clubs to open-air mountain stages across Germany, Austria and Switzerland, his sets are built for one thing: the moment the whole room moves.</p>
-  <p>Dad of two, relentless digger, and the man behind the <b>Vol mix series</b> — including <b>Vol2 · Berlin Techno</b>. His remix of Ace of Base's "All That She Wants" and the free-download VIP "She Wants To Move" have become staples of his sets, alongside live recordings like the Graf Rumford Afro House mix and the Howler live series.</p>
+  <p data-i18n="bio.p1"><b>Warren Will</b> is a Munich-based DJ and producer playing groovy, bass-driven Tech House — the kind that fills floors and keeps them full. From basement clubs to open-air mountain stages across Germany, Austria and Switzerland, his sets are built for one thing: the moment the whole room moves.</p>
+  <p data-i18n="bio.p2">Dad of two, relentless digger, and the man behind the <b>Vol mix series</b> — including <b>Vol2 · Berlin Techno</b>. His remix of Ace of Base's "All That She Wants" and the free-download VIP "She Wants To Move" have become staples of his sets, alongside live recordings like the Graf Rumford Afro House mix and the Howler live series.</p>
   <div class="stats">
-    <div class="stat"><div class="n">22</div><div class="l">Tracks released</div></div>
-    <div class="stat"><div class="n">±50</div><div class="l">Gigs / year</div></div>
-    <div class="stat"><div class="n">MUC</div><div class="l">Home base</div></div>
+    <div class="stat"><div class="n">22</div><div class="l" data-i18n="stat.tracks">Tracks released</div></div>
+    <div class="stat"><div class="n">±50</div><div class="l" data-i18n="stat.gigs">Gigs / year</div></div>
+    <div class="stat"><div class="n">MUC</div><div class="l" data-i18n="stat.base">Home base</div></div>
   </div>
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-tag">// 02</span><h2>PRESS PHOTOS</h2><span class="sec-note">click to open full size</span></div>
+  <div class="sec-head"><span class="sec-tag">// 02</span><h2 data-i18n="photos.h2">PRESS PHOTOS</h2><span class="sec-note" data-i18n="photos.note">click to open full size</span></div>
   <div class="photo-grid">
-    <a class="photo" href="assets/gig-starni.jpg" target="_blank" rel="noopener"><img src="assets/gig-starni.jpg" alt="Warren Will live — 5 Years Starni open air"/><span>5 Years Starni</span></a>
-    <a class="photo" href="assets/gig-mountain.jpg" target="_blank" rel="noopener"><img src="assets/gig-mountain.jpg" alt="Warren Will live — mountain open air, the Alps"/><span>Mountain Open Air</span></a>
-    <a class="photo" href="assets/gig-bestof.jpg" target="_blank" rel="noopener"><img src="assets/gig-bestof.jpg" alt="Warren Will live — on the road"/><span>On The Road</span></a>
-    <a class="photo" href="https://i1.sndcdn.com/avatars-GAq6zX4KdBa8xWD0-In9RrQ-t1080x1080.jpg" target="_blank" rel="noopener"><img src="https://i1.sndcdn.com/avatars-GAq6zX4KdBa8xWD0-In9RrQ-t1080x1080.jpg" alt="Warren Will — portrait"/><span>Portrait</span></a>
+    <a class="photo" href="assets/gig-starni.jpg" target="_blank" rel="noopener"><img src="assets/gig-starni.jpg" alt="Warren Will live — 5 Years Starni open air" data-i18n-alt="photos.alt1"/><span>5 Years Starni</span></a>
+    <a class="photo" href="assets/gig-mountain.jpg" target="_blank" rel="noopener"><img src="assets/gig-mountain.jpg" alt="Warren Will live — mountain open air, the Alps" data-i18n-alt="photos.alt2"/><span>Mountain Open Air</span></a>
+    <a class="photo" href="assets/gig-bestof.jpg" target="_blank" rel="noopener"><img src="assets/gig-bestof.jpg" alt="Warren Will live — on the road" data-i18n-alt="photos.alt3"/><span>On The Road</span></a>
+    <a class="photo" href="https://i1.sndcdn.com/avatars-GAq6zX4KdBa8xWD0-In9RrQ-t1080x1080.jpg" target="_blank" rel="noopener"><img src="https://i1.sndcdn.com/avatars-GAq6zX4KdBa8xWD0-In9RrQ-t1080x1080.jpg" alt="Warren Will — portrait" data-i18n-alt="photos.alt4"/><span>Portrait</span></a>
   </div>
-  <p class="photo-note">Hi-res originals + approved usage: booking@warrenwilliam.de</p>
+  <p class="photo-note" data-i18n="photos.foot">Hi-res originals + approved usage: booking@warrenwilliam.de</p>
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-tag">// 03</span><h2>LIVE VIDEOS</h2><span class="sec-note">recent dancefloors</span></div>
+  <div class="sec-head"><span class="sec-tag">// 03</span><h2 data-i18n="vid.h2">LIVE VIDEOS</h2><span class="sec-note" data-i18n="vid.note">recent dancefloors</span></div>
   <div class="vid-grid">
     <div class="vid-card"><video muted loop playsinline preload="metadata" poster="assets/gig-starni.jpg" src="assets/gig-starni.mp4"></video><p><b>01</b> 5 Years Starni — Open Air</p></div>
-    <div class="vid-card"><video muted loop playsinline preload="metadata" poster="assets/gig-mountain.jpg" src="assets/gig-mountain.mp4"></video><p><b>02</b> Mountain Open Air — The Alps</p></div>
+    <div class="vid-card"><video muted loop playsinline preload="metadata" poster="assets/gig-mountain.jpg" src="assets/gig-mountain.mp4"></video><p><b>02</b> <span data-i18n="vid.c2">Mountain Open Air — The Alps</span></p></div>
     <div class="vid-card"><video muted loop playsinline preload="metadata" poster="assets/gig-bestof.jpg" src="assets/gig-bestof.mp4"></video><p><b>03</b> Best Of — On The Road</p></div>
   </div>
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-tag">// 04</span><h2>THE SOUND</h2><span class="sec-note">live set — press play</span></div>
+  <div class="sec-head"><span class="sec-tag">// 04</span><h2 data-i18n="sound.h2">THE SOUND</h2><span class="sec-note" data-i18n="sound.note">live set — press play</span></div>
   <div class="sound-grid">
     <div>
-      <p class="feat-label">Featured live set — <b>Howler Recording 4</b></p>
+      <p class="feat-label" data-i18n="sound.feat">Featured live set — <b>Howler Recording 4</b></p>
       <div class="sc-embed">
-        <iframe title="Warren Will — Howler Recording 4 on SoundCloud" scrolling="no" allow="autoplay"
+        <iframe title="Warren Will — Howler Recording 4 on SoundCloud" data-i18n-title="sc.title" scrolling="no" allow="autoplay"
           src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/warrenwillmusic/howler-recording-4&color=%23a9853e&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true">
         </iframe>
       </div>
     </div>
     <div>
-      <p class="feat-label">Platforms</p>
+      <p class="feat-label" data-i18n="sound.platforms">Platforms</p>
       <div class="plat-row">
         <a class="plat" href="https://soundcloud.com/warrenwillmusic" target="_blank" rel="noopener">SoundCloud</a>
         <a class="plat" href="https://open.spotify.com/artist/6wMr4zKPrrR0UVz08WtUWc" target="_blank" rel="noopener">Spotify</a>
@@ -240,7 +253,7 @@ footer{padding:36px 28px;display:flex;align-items:center;justify-content:space-b
         <a class="plat" href="https://www.instagram.com/warrenwillmusic/" target="_blank" rel="noopener">Instagram</a>
         <a class="plat" href="https://www.tiktok.com/@warrenwillmusic" target="_blank" rel="noopener">TikTok</a>
       </div>
-      <p class="feat-label" style="margin-top:28px">Signature tracks</p>
+      <p class="feat-label" style="margin-top:28px" data-i18n="sound.signature">Signature tracks</p>
       <div class="plat-row">
         <a class="plat" href="https://soundcloud.com/warrenwillmusic/vol2-berlin-techno" target="_blank" rel="noopener">Vol2 — Berlin Techno</a>
         <a class="plat" href="https://soundcloud.com/warrenwillmusic/she-wants-to-move-warren-will-vip" target="_blank" rel="noopener">She Wants To Move [VIP]</a>
@@ -251,74 +264,74 @@ footer{padding:36px 28px;display:flex;align-items:center;justify-content:space-b
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-tag">// 05</span><h2>UPCOMING</h2><span class="sec-note">august 2026</span></div>
-  <div class="gig-row"><div class="g-date"><span class="g-d">08</span><span class="g-m">AUG</span></div><div class="g-info"><h4>Pacha Munich</h4><p>Munich</p></div><span class="g-tag">Club</span></div>
+  <div class="sec-head"><span class="sec-tag">// 05</span><h2 data-i18n="up.h2">UPCOMING</h2><span class="sec-note" data-i18n="up.note">august 2026</span></div>
+  <div class="gig-row"><div class="g-date"><span class="g-d">08</span><span class="g-m">AUG</span></div><div class="g-info"><h4>Pacha Munich</h4><p data-i18n="up.city1">Munich</p></div><span class="g-tag">Club</span></div>
   <div class="gig-row"><div class="g-date"><span class="g-d">14</span><span class="g-m">AUG</span></div><div class="g-info"><h4>Gateway Gardens Club</h4><p>Frankfurt</p></div><span class="g-tag">Club</span></div>
   <div class="gig-row"><div class="g-date"><span class="g-d">20</span><span class="g-m">AUG</span></div><div class="g-info"><h4>Pracht</h4><p>Frankfurt</p></div><span class="g-tag">Club</span></div>
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-tag">// 06</span><h2>PACKAGES</h2><span class="sec-note">50% deposit secures the date</span></div>
+  <div class="sec-head"><span class="sec-tag">// 06</span><h2 data-i18n="pkg.h2">PACKAGES</h2><span class="sec-note" data-i18n="pkg.note">50% deposit secures the date</span></div>
   <div class="pkg-grid">
     <div class="pkg">
-      <span class="p-tag">Club Set</span><h3>CLUB NIGHT</h3><p class="p-price">€250–400 / night</p>
-      <ul><li>2–3 h Tech House set, own USB / laptop setup</li><li>Community guestlist push to fill the floor</li><li>Social clip of the night for the venue</li></ul>
-      <a class="pkg-cta" href="mailto:booking@warrenwilliam.de?subject=Booking%20%E2%80%94%20Club%20Night%20(via%20EPK)">Book a club night →</a>
+      <span class="p-tag" data-i18n="p1.tag">Club Set</span><h3 data-i18n="p1.h3">CLUB NIGHT</h3><p class="p-price" data-i18n="p1.price">€250–400 / night</p>
+      <ul><li data-i18n="p1.l1">2–3 h Tech House set, own USB / laptop setup</li><li data-i18n="p1.l2">Community guestlist push to fill the floor</li><li data-i18n="p1.l3">Social clip of the night for the venue</li></ul>
+      <a class="pkg-cta" href="mailto:booking@warrenwilliam.de?subject=Booking%20%E2%80%94%20Club%20Night%20(via%20EPK)" data-i18n-href="p1.mail" data-i18n="p1.cta">Book a club night →</a>
     </div>
     <div class="pkg">
-      <span class="p-tag">Private &amp; Wedding</span><h3>PRIVATE EVENT</h3><p class="p-price">€600–1,200 / event</p>
-      <ul><li>4–6 h coverage · pre-event music consultation</li><li>Tailored playlist arc + backup equipment</li><li>Optional custom edit of the couple's song</li></ul>
-      <a class="pkg-cta" href="mailto:booking@warrenwilliam.de?subject=Booking%20%E2%80%94%20Private%20Event%20(via%20EPK)">Book a private event →</a>
+      <span class="p-tag" data-i18n="p2.tag">Private &amp; Wedding</span><h3 data-i18n="p2.h3">PRIVATE EVENT</h3><p class="p-price" data-i18n="p2.price">€600–1,200 / event</p>
+      <ul><li data-i18n="p2.l1">4–6 h coverage · pre-event music consultation</li><li data-i18n="p2.l2">Tailored playlist arc + backup equipment</li><li data-i18n="p2.l3">Optional custom edit of the couple's song</li></ul>
+      <a class="pkg-cta" href="mailto:booking@warrenwilliam.de?subject=Booking%20%E2%80%94%20Private%20Event%20(via%20EPK)" data-i18n-href="p2.mail" data-i18n="p2.cta">Book a private event →</a>
     </div>
     <div class="pkg">
-      <span class="p-tag">Festival / Open Air</span><h3>FESTIVAL</h3><p class="p-price">€500+ · plus travel</p>
-      <ul><li>60–90 min peak set · stage plot &amp; tech rider</li><li>Recorded set for YouTube · event cross-promo</li><li>Germany-wide &amp; DACH travel</li></ul>
-      <a class="pkg-cta" href="mailto:booking@warrenwilliam.de?subject=Booking%20%E2%80%94%20Festival%20%2F%20Open%20Air%20(via%20EPK)">Book a festival slot →</a>
+      <span class="p-tag">Festival / Open Air</span><h3>FESTIVAL</h3><p class="p-price" data-i18n="p3.price">€500+ · plus travel</p>
+      <ul><li data-i18n="p3.l1">60–90 min peak set · stage plot &amp; tech rider</li><li data-i18n="p3.l2">Recorded set for YouTube · event cross-promo</li><li data-i18n="p3.l3">Germany-wide &amp; DACH travel</li></ul>
+      <a class="pkg-cta" href="mailto:booking@warrenwilliam.de?subject=Booking%20%E2%80%94%20Festival%20%2F%20Open%20Air%20(via%20EPK)" data-i18n-href="p3.mail" data-i18n="p3.cta">Book a festival slot →</a>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="sec-head"><span class="sec-tag">// 07</span><h2>TECH &amp; HOSPITALITY</h2><span class="sec-note">summary — full rider on request</span></div>
+  <div class="sec-head"><span class="sec-tag">// 07</span><h2 data-i18n="tech.h2">TECH &amp; HOSPITALITY</h2><span class="sec-note" data-i18n="tech.note">summary — full rider on request</span></div>
   <div class="rider-grid">
     <div class="rider">
-      <h3>DJ SETUP</h3>
+      <h3 data-i18n="r1.h3">DJ SETUP</h3>
       <ul>
-        <li>2+ CDJs (current-gen) or XDJ all-in-one — or Warren brings his own USB / laptop rig</li>
-        <li>1× 4-channel club mixer (DJM-900 class or equivalent)</li>
-        <li>2× booth monitors, level-controlled from booth</li>
-        <li>Soundcheck / line check: 60 min before doors</li>
+        <li data-i18n="r1.l1">2+ CDJs (current-gen) or XDJ all-in-one — or Warren brings his own USB / laptop rig</li>
+        <li data-i18n="r1.l2">1× 4-channel club mixer (DJM-900 class or equivalent)</li>
+        <li data-i18n="r1.l3">2× booth monitors, level-controlled from booth</li>
+        <li data-i18n="r1.l4">Soundcheck / line check: 60 min before doors</li>
       </ul>
     </div>
     <div class="rider">
-      <h3>ON THE NIGHT</h3>
+      <h3 data-i18n="r2.h3">ON THE NIGHT</h3>
       <ul>
-        <li>Set lengths: 60–90 min (festival) · 2–3 h (club) · up to 6 h (private)</li>
-        <li>Travel: Munich-based — Germany-wide &amp; DACH, travel + accommodation for 100 km+</li>
-        <li>Own content capture for socials (recap clip for the venue included)</li>
-        <li>50% deposit secures the date · erste Option holds 7 days</li>
+        <li data-i18n="r2.l1">Set lengths: 60–90 min (festival) · 2–3 h (club) · up to 6 h (private)</li>
+        <li data-i18n="r2.l2">Travel: Munich-based — Germany-wide &amp; DACH, travel + accommodation for 100 km+</li>
+        <li data-i18n="r2.l3">Own content capture for socials (recap clip for the venue included)</li>
+        <li data-i18n="r2.l4">50% deposit secures the date · erste Option holds 7 days</li>
       </ul>
     </div>
   </div>
-  <p class="rider-note">Full technical rider PDF + stage plot: booking@warrenwilliam.de</p>
+  <p class="rider-note" data-i18n="tech.foot">Full technical rider PDF + stage plot: booking@warrenwilliam.de</p>
 </section>
 
 <section id="book">
   <div class="inner">
-    <p class="eyebrow">// bookings</p>
-    <h2>BOOK WARREN WILL</h2>
-    <p>One email — date, city, venue type. You get a reply within 48 hours with availability, a tailored offer and the rider. Für Anfragen auf Deutsch — einfach schreiben.</p>
-    <a class="btn" href="mailto:booking@warrenwilliam.de?subject=Booking%20Inquiry%20—%20Warren%20Will%20(via%20EPK)">booking@warrenwilliam.de</a>
-    <a class="btn btn-ghost" href="index.html#booking">Booking form →</a>
+    <p class="eyebrow" data-i18n="book.eyebrow">// bookings</p>
+    <h2 data-i18n="book.h2">BOOK WARREN WILL</h2>
+    <p data-i18n="book.p">One email — date, city, venue type. You get a reply within 48 hours with availability, a tailored offer and the rider. Für Anfragen auf Deutsch — einfach schreiben.</p>
+    <a class="btn" href="mailto:booking@warrenwilliam.de?subject=Booking%20Inquiry%20—%20Warren%20Will%20(via%20EPK)" data-i18n-href="book.mail">booking@warrenwilliam.de</a>
+    <a class="btn btn-ghost" href="index.html#booking" data-i18n="book.form">Booking form →</a>
     <a class="btn btn-ghost no-print" href="epk-warren-will.pdf" download="Warren-Will-EPK-2026.pdf">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12 16l-6-6h4V3h4v7h4l-6 6zM4 19h16v2H4z"/></svg>
-      Download as PDF ↓</a>
+      <span data-i18n="book.pdf">Download as PDF ↓</span></a>
   </div>
 </section>
 
 <footer>
-  <p class="f-copy">© 2026 Warren Will · Munich · Electronic Press Kit</p>
-  <nav class="f-links" aria-label="Footer links">
+  <p class="f-copy" data-i18n="foot.copy">© 2026 Warren Will · Munich · Electronic Press Kit</p>
+  <nav class="f-links" aria-label="Footer links" data-i18n-aria="foot.aria">
     <a href="index.html">Website</a>
     <a href="https://soundcloud.com/warrenwillmusic" target="_blank" rel="noopener">SoundCloud</a>
     <a href="https://www.instagram.com/warrenwillmusic/" target="_blank" rel="noopener">Instagram</a>
@@ -336,6 +349,159 @@ document.querySelectorAll('.vid-card video').forEach(v => {
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   io.observe(v);
 });
+</script>
+
+<script>
+/* Bilingual EPK — DE/EN toggle.
+   English copy is captured from the DOM at runtime, so EN mode always
+   restores the exact source markup. German lives in the DE dictionary.
+   Default: browser language (de-* → German), persisted in localStorage. */
+(function(){
+  var DE = {
+    'meta.title': 'Warren Will — Electronic Press Kit · DJ & Produzent München',
+    'meta.desc': 'Warren Will EPK — Tech-House-DJ & Produzent aus München. Bio, Pressefotos, Live-Videos, Rider, Pakete und Booking-Kontakt. booking@warrenwilliam.de',
+    'nav.aria': 'EPK-Navigation',
+    'foot.aria': 'Footer-Links',
+    'nav.book': 'ANFRAGE',
+    'hero.sub': 'DJ &amp; Produzent aus München. Groovender, bassgetriebener Tech House — von Basement-Clubs bis zu Open-Air-Floors in den Bergen, in der gesamten DACH-Region.',
+    'chip.base': 'Homebase',
+    'chip.tracks': 'Tracks veröffentlicht',
+    'chip.gigs': 'Gigs / Jahr',
+    'hero.pdf': 'EPK herunterladen — PDF',
+    'hero.book': 'Warren buchen →',
+    'hero.mail': 'mailto:booking@warrenwilliam.de?subject=Buchungsanfrage%20%E2%80%94%20Warren%20Will%20(via%20EPK)',
+    'hero.imgalt': 'Warren Will — Portrait',
+    'bio.p1': '<b>Warren Will</b> ist DJ und Produzent aus München — groovender, bassgetriebener Tech House, der Floors füllt und voll hält. Von Basement-Clubs bis zu Open-Air-Bühnen in den Bergen in Deutschland, Österreich und der Schweiz: Seine Sets sind für genau einen Moment gebaut — wenn sich der ganze Raum bewegt.',
+    'bio.p2': 'Zweifacher Vater, unermüdlicher Digger und der Mann hinter der <b>Vol-Mixserie</b> — unter anderem <b>Vol2 · Berlin Techno</b>. Sein Remix des Ace-of-Base-Klassikers „All That She Wants“ und der Free-Download-VIP „She Wants To Move“ sind längst feste Bestandteile seiner Sets — zusammen mit Live-Mitschnitten wie dem Graf-Rumford-Afro-House-Mix und der Howler-Live-Serie.',
+    'stat.tracks': 'Tracks veröffentlicht',
+    'stat.gigs': 'Gigs / Jahr',
+    'stat.base': 'Homebase',
+    'photos.h2': 'PRESSEFOTOS',
+    'photos.note': 'Klick öffnet volle Auflösung',
+    'photos.alt1': 'Warren Will live — 5 Years Starni Open Air',
+    'photos.alt2': 'Warren Will live — Mountain Open Air, die Alpen',
+    'photos.alt3': 'Warren Will live — unterwegs',
+    'photos.alt4': 'Warren Will — Portrait',
+    'photos.foot': 'Hochauflösende Originale + Nutzungsfreigaben: booking@warrenwilliam.de',
+    'vid.h2': 'LIVE-VIDEOS',
+    'vid.note': 'Aktuelle Dancefloors',
+    'vid.c2': 'Mountain Open Air — Die Alpen',
+    'sound.h2': 'DER SOUND',
+    'sound.note': 'Live-Set — Play drücken',
+    'sound.feat': 'Live-Set im Fokus — <b>Howler Recording 4</b>',
+    'sc.title': 'Warren Will — Howler Recording 4 auf SoundCloud',
+    'sound.platforms': 'Plattformen',
+    'sound.signature': 'Signature-Tracks',
+    'up.h2': 'TERMINE',
+    'up.note': 'August 2026',
+    'up.city1': 'München',
+    'pkg.h2': 'PAKETE',
+    'pkg.note': '50 % Anzahlung sichert den Termin',
+    'p1.tag': 'Club-Set',
+    'p1.h3': 'CLUBNIGHT',
+    'p1.price': '250–400 € / Nacht',
+    'p1.l1': '2–3 Std. Tech-House-Set, eigenes USB-/Laptop-Setup',
+    'p1.l2': 'Gästelisten-Push in der Community für einen vollen Floor',
+    'p1.l3': 'Social-Media-Clip des Abends für die Venue',
+    'p1.cta': 'Clubnight buchen →',
+    'p1.mail': 'mailto:booking@warrenwilliam.de?subject=Buchungsanfrage%20%E2%80%94%20Clubnight%20(via%20EPK)',
+    'p2.tag': 'Privat &amp; Hochzeit',
+    'p2.h3': 'PRIVATE FEIER',
+    'p2.price': '600–1.200 € / Event',
+    'p2.l1': '4–6 Std. Betreuung · Musikberatung im Vorfeld',
+    'p2.l2': 'Maßgeschneiderter Playlist-Verlauf + Backup-Equipment',
+    'p2.l3': 'Optional: individueller Edit des Songs des Brautpaars',
+    'p2.cta': 'Private Feier buchen →',
+    'p2.mail': 'mailto:booking@warrenwilliam.de?subject=Buchungsanfrage%20%E2%80%94%20Private%20Feier%20(via%20EPK)',
+    'p3.price': 'ab 500 € · zzgl. Anreise',
+    'p3.l1': '60–90 Min. Peak-Time-Set · Stage Plot &amp; Tech Rider',
+    'p3.l2': 'Set-Mitschnitt für YouTube · Cross-Promo zum Event',
+    'p3.l3': 'Anreise deutschlandweit &amp; gesamte DACH-Region',
+    'p3.cta': 'Festival-Slot buchen →',
+    'p3.mail': 'mailto:booking@warrenwilliam.de?subject=Buchungsanfrage%20%E2%80%94%20Festival%20%2F%20Open%20Air%20(via%20EPK)',
+    'tech.h2': 'TECHNIK &amp; HOSPITALITY',
+    'tech.note': 'Kurzfassung — kompletter Rider auf Anfrage',
+    'r1.h3': 'DJ-SETUP',
+    'r1.l1': '2+ CDJs (aktuelle Generation) oder XDJ-All-in-One — oder Warren bringt sein eigenes USB-/Laptop-Rig mit',
+    'r1.l2': '1× 4-Kanal-Clubmixer (DJM-900-Klasse oder gleichwertig)',
+    'r1.l3': '2× Booth-Monitore, Pegel regelbar von der Booth',
+    'r1.l4': 'Soundcheck / Linecheck: 60 Min. vor Einlass',
+    'r2.h3': 'AM ABEND',
+    'r2.l1': 'Setlängen: 60–90 Min. (Festival) · 2–3 Std. (Club) · bis zu 6 Std. (privat)',
+    'r2.l2': 'Anreise: Homebase München — deutschlandweit &amp; DACH; Fahrtkosten + Übernachtung ab 100 km',
+    'r2.l3': 'Eigener Content für Socials (Recap-Clip für die Venue inklusive)',
+    'r2.l4': '50 % Anzahlung sichert den Termin · Erste Option gilt 7 Tage',
+    'tech.foot': 'Kompletter Tech-Rider als PDF + Stage Plot: booking@warrenwilliam.de',
+    'book.eyebrow': '// buchungsanfragen',
+    'book.h2': 'WARREN WILL BUCHEN',
+    'book.p': 'Eine E-Mail — Datum, Stadt, Art der Location. Antwort innerhalb von 48 Stunden mit Verfügbarkeit, maßgeschneidertem Angebot und Rider. For enquiries in English — just get in touch.',
+    'book.mail': 'mailto:booking@warrenwilliam.de?subject=Buchungsanfrage%20%E2%80%94%20Warren%20Will%20(via%20EPK)',
+    'book.form': 'Buchungsformular →',
+    'book.pdf': 'Als PDF herunterladen ↓',
+    'foot.copy': '© 2026 Warren Will · München · Electronic Press Kit'
+  };
+  var EN = {};
+  var captured = false;
+  function capture(){
+    if(captured) return;
+    captured = true;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ EN[el.getAttribute('data-i18n')] = el.innerHTML; });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el){ EN[el.getAttribute('data-i18n-alt')] = el.getAttribute('alt'); });
+    document.querySelectorAll('[data-i18n-title]').forEach(function(el){ EN[el.getAttribute('data-i18n-title')] = el.getAttribute('title'); });
+    document.querySelectorAll('[data-i18n-href]').forEach(function(el){ EN[el.getAttribute('data-i18n-href')] = el.getAttribute('href'); });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){ EN[el.getAttribute('data-i18n-aria')] = el.getAttribute('aria-label'); });
+    EN['meta.title'] = document.title;
+    var m = document.querySelector('meta[name="description"]');
+    if(m) EN['meta.desc'] = m.getAttribute('content');
+  }
+  function pick(key, lang){
+    if(lang === 'de' && typeof DE[key] === 'string') return DE[key];
+    return EN[key];
+  }
+  function setLang(lang, persist){
+    capture();
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var v = pick(el.getAttribute('data-i18n'), lang);
+      if(typeof v === 'string') el.innerHTML = v;
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function(el){
+      var v = pick(el.getAttribute('data-i18n-alt'), lang);
+      if(typeof v === 'string') el.setAttribute('alt', v);
+    });
+    document.querySelectorAll('[data-i18n-title]').forEach(function(el){
+      var v = pick(el.getAttribute('data-i18n-title'), lang);
+      if(typeof v === 'string') el.setAttribute('title', v);
+    });
+    document.querySelectorAll('[data-i18n-href]').forEach(function(el){
+      var v = pick(el.getAttribute('data-i18n-href'), lang);
+      if(typeof v === 'string') el.setAttribute('href', v);
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){
+      var v = pick(el.getAttribute('data-i18n-aria'), lang);
+      if(typeof v === 'string') el.setAttribute('aria-label', v);
+    });
+    var t = pick('meta.title', lang);
+    if(typeof t === 'string') document.title = t;
+    var m = document.querySelector('meta[name="description"]');
+    if(m){ var d = pick('meta.desc', lang); if(typeof d === 'string') m.setAttribute('content', d); }
+    document.querySelectorAll('.lang-toggle [data-lang]').forEach(function(b){
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    if(persist){ try{ localStorage.setItem('wwEpkLang', lang); }catch(e){} }
+  }
+  var initial = null;
+  try{ initial = localStorage.getItem('wwEpkLang'); }catch(e){}
+  if(initial !== 'de' && initial !== 'en'){
+    initial = /^de/i.test(navigator.language || '') ? 'de' : 'en';
+  }
+  document.querySelectorAll('.lang-toggle [data-lang]').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang'), true); });
+  });
+  setLang(initial, false);
+})();
 </script>
 </body>
 </html>
